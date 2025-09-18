@@ -12,267 +12,194 @@
             box-sizing: border-box;
         }
 
-        /* Navigation styling */
-        header {
-            position: sticky;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            width: 95%;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            margin: 2.5%;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav a {
-            color: blueviolet;
-            text-decoration: none;
-        }
-
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
             min-height: 100vh;
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.2);
-            padding: 40px;
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        .main-heading {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .gallery-header {
             text-align: center;
-            color: #333;
-            font-size: 3.5em;
-            margin-bottom: 60px;
-            border-bottom: 4px solid blueviolet;
-            padding-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .gallery-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .gallery-item {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            max-width: 100%;
-            min-height: 400px;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
         }
 
         .gallery-item img {
             width: 100%;
-            height: 300px;
+            height: 250px;
             object-fit: cover;
-            object-position: center;
-            transition: transform 0.3s ease;
-            max-width: 100%;
-            display: block;
+            border-radius: 10px;
+            margin-bottom: 1rem;
         }
 
         .gallery-item #kali {
-            width: 100%;
-            height: 300px;
-            object-fit:fill;
-            object-position: center;
-            transition: transform 0.3s ease;
-            max-width: 100%;
-            display: block;
-        }
-
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .image-caption {
-            padding: 25px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            object-fit: contain;
         }
 
         .image-title {
-            font-size: 1.4em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-            border-left: 4px solid blueviolet;
-            padding-left: 15px;
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .image-description {
-            color: #666;
-            font-size: 1em;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            font-size: 1rem;
             line-height: 1.6;
-            text-align: justify;
+            color: white;
         }
 
-        /* Special styling for different image categories */
-        .gallery-item:nth-child(odd) .image-caption {
-            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+        .highlight {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
         }
 
-        .gallery-item:nth-child(even) .image-caption {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-        }
-
-        /* Enhanced responsive design with better image control */
-        @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .main-heading {
-                font-size: 2.5em;
-            }
-            
-            .container {
-                padding: 20px;
-            }
-
-            .gallery-item img {
-                height: auto;
-                min-height: 200px;
-                max-height: 300px;
-                object-fit: contain;
-                object-position: center;
-            }
-            
-            .gallery-item {
-                min-height: auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-item {
-                margin-bottom: 20px;
-                min-height: auto;
-            }
-            
-            .gallery-item img {
-                height: auto;
-                min-height: 180px;
-                max-height: 250px;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1><a href="home.html" style="text-decoration: none; color:blueviolet">Faisal Iqbal</a></h1>
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
+            <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">Faisal Iqbal</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="contactMe.html">Contact Me</a></li>
+                <li><a href="contactMe.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <h1 class="main-heading">My Gallery</h1>
+    <main>
+        <div class="gallery-header">
+            <h1>My <span class="highlight">Gallery</span></h1>
+            <p>A visual journey through my experiences and memorable moments</p>
+        </div>
         
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img id="kali" src="images/kali_linux_desktop.jpg" alt="Kali Linux Desktop">
-                <div class="image-caption">
-                    <h3 class="image-title">My Favorite OS Interface</h3>
-                    <p class="image-description">This is Kali Linux with GNOME Shell desktop installed. This is the most used OS of mine - it is very simple and beautiful, at least for me. I love its clean interface and powerful capabilities.</p>
-                </div>
+                <h3 class="image-title">My Favorite OS Interface</h3>
+                <div class="image-description">This is Kali Linux with GNOME Shell desktop installed. This is the most used OS of mine - it is very simple and beautiful, at least for me. I love its clean interface and powerful capabilities.</div>
             </div>
 
             <div class="gallery-item">
                 <img src="images/moon_view_karak.jpg" alt="Moon View from Karak">
-                <div class="image-caption">
-                    <h3 class="image-title">Beautiful Moon View</h3>
-                    <p class="image-description">A picture by me from my bed of the beautiful moon view of Karak. The serene night sky and the glowing moon create such a peaceful atmosphere that I never get tired of watching.</p>
-                </div>
+                <h3 class="image-title">Beautiful Moon View</h3>
+                <div class="image-description">A picture by me from my bed of the beautiful moon view of Karak. The serene night sky and the glowing moon create such a peaceful atmosphere that I never get tired of watching.</div>
             </div>
 
             <div class="gallery-item" id="toyota">
                 <img src="images/toyota_dream_workplace.jpeg" alt="Toyota">
-                <div class="image-caption">
-                    <h3 class="image-title">Dream Workplace - Toyota</h3>
-                    <p class="image-description">I dream to work here someday and impact decisions of this place. Toyota represents innovation, quality, and excellence - values that align with my career aspirations in engineering.</p>
-                </div>
+                <h3 class="image-title">Dream Workplace - Toyota</h3>
+                <div class="image-description">I dream to work here someday and impact decisions of this place. Toyota represents innovation, quality, and excellence - values that align with my career aspirations in engineering.</div>
             </div>
 
             <div class="gallery-item">
                 <img src="images/peshawar_home_city.jpeg" alt="Peshawar City">
-                <div class="image-caption">
-                    <h3 class="image-title">Home Sweet Home - Peshawar</h3>
-                    <p class="image-description">I feel this place home. May this city live in peace. Peshawar holds a special place in my heart with its rich culture, warm people, and beautiful landscapes.</p>
-                </div>
+                <h3 class="image-title">Home Sweet Home - Peshawar</h3>
+                <div class="image-description">I feel this place home. May this city live in peace. Peshawar holds a special place in my heart with its rich culture, warm people, and beautiful landscapes.</div>
             </div>
 
             <div class="gallery-item">
                 <img src="images/nust_university_dream.jpeg" alt="NUST University">
-                <div class="image-caption">
-                    <h3 class="image-title">My First Dream - NUST</h3>
-                    <p class="image-description">This was my first dream to study engineering at here and I had successfully been here for the journey. NUST represents academic excellence and the foundation of my engineering career.</p>
-                </div>
+                <h3 class="image-title">My First Dream - NUST</h3>
+                <div class="image-description">This was my first dream to study engineering at here and I had successfully been here for the journey. NUST represents academic excellence and the foundation of my engineering career.</div>
             </div>
 
             <div class="gallery-item">
                 <img src="images/giant_ludo_creation.jpeg" alt="Giant Ludo Game">
-                <div class="image-caption">
-                    <h3 class="image-title">Giant Ludo Creation</h3>
-                    <p class="image-description">I was able to draw this huge 30 by 30 feet ludo on the ground and we also played it by throwing the dice towards the sky and see what comes out. Very playful and memorable experience!</p>
-                </div>
+                <h3 class="image-title">Giant Ludo Creation</h3>
+                <div class="image-description">I was able to draw this huge 30 by 30 feet ludo on the ground and we also played it by throwing the dice towards the sky and see what comes out. Very playful and memorable experience!</div>
             </div>
 
             <div class="gallery-item">
                 <img src="images/village_sunset_clouds.jpeg" alt="Village Sunset">
-                <div class="image-caption">
-                    <h3 class="image-title">Village Sunset</h3>
-                    <p class="image-description">The sunset time of my village. There's something magical about the golden hour in rural areas - the peaceful atmosphere, the warm colors painting the sky, and the tranquil end to another beautiful day.</p>
-                </div>
+                <h3 class="image-title">Village Sunset</h3>
+                <div class="image-description">The sunset time of my village. There's something magical about the golden hour in rural areas - the peaceful atmosphere, the warm colors painting the sky, and the tranquil end to another beautiful day.</div>
             </div>
 
             <div class="gallery-item">
                 <img src="images/favorite_dish.jpeg" alt="Favorite Dish">
-                <div class="image-caption">
-                    <h3 class="image-title">My Favorite Dish</h3>
-                    <p class="image-description">This is the dish I like most. The brand I like for this dish is Janana Foods Karak - it has the perfect taste and authentic flavor that I always crave.</p>
-                </div>
+                <h3 class="image-title">My Favorite Dish</h3>
+                <div class="image-description">This is the dish I like most. The brand I like for this dish is Janana Foods Karak - it has the perfect taste and authentic flavor that I always crave.</div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
