@@ -12,57 +12,70 @@
             box-sizing: border-box;
         }
 
-        /* Navigation styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
         header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
             position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
             display: flex;
-            flex-direction: row;
-            align-items: center;
             justify-content: space-between;
-            width: 95%;
-            background-color: #333;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
             color: white;
-            padding: 10px;
-            margin: 2.5%;
         }
 
-        nav ul {
-            list-style-type: none;
+        .nav-links {
             display: flex;
-            flex-direction: row;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
+            list-style: none;
+            gap: 2rem;
         }
 
-        nav a {
-            color: blueviolet;
+        .nav-links a {
+            color: white;
             text-decoration: none;
         }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
-        .container {
+        main {
             max-width: 1200px;
             margin: 0 auto;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            padding: 40px;
+            padding: 2rem;
         }
 
-        .main-heading {
+        .skills-header {
             text-align: center;
-            color: #333;
-            font-size: 3em;
-            margin-bottom: 50px;
-            border-bottom: 4px solid blueviolet;
-            padding-bottom: 20px;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .skills-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .skills-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .skills-grid {
@@ -72,25 +85,21 @@
         }
 
         .skill-category {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: white;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
         }
 
         .skill-category h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             text-align: center;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-            padding-bottom: 10px;
+            color: #ffd700;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 0.5rem;
         }
 
         .skill-list {
@@ -98,70 +107,31 @@
         }
 
         .skill-list li {
-            background: rgba(255,255,255,0.1);
-            margin: 8px 0;
-            padding: 10px 15px;
-            border-radius: 25px;
-            border-left: 4px solid rgba(255,255,255,0.5);
-            transition: background 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0.5rem 0;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffd700;
+            opacity: 0.9;
         }
 
-        .skill-list li:hover {
-            background: rgba(255,255,255,0.2);
-        }
 
-        /* Different gradient colors for variety */
-        .skill-category:nth-child(1) {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
 
-        .skill-category:nth-child(2) {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .skill-category:nth-child(3) {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .skill-category:nth-child(4) {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-        }
-
-        .skill-category:nth-child(5) {
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-        }
-
-        .skill-category:nth-child(6) {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            color: #333;
-        }
-
-        .skill-category:nth-child(7) {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-            color: #333;
-        }
-
-        @media (max-width: 768px) {
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .main-heading {
-                font-size: 2.5em;
-            }
-            
-            .container {
-                padding: 20px;
-            }
+        .highlight {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1><a href="home.html" style="text-decoration: none; color:blueviolet">Faisal Iqbal</a></h1>
         <nav>
-                        <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
+            <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">Faisal Iqbal</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -171,8 +141,11 @@
         </nav>
     </header>
 
-    <div class="container">
-        <h1 class="main-heading">My Skills & Expertise</h1>
+    <main>
+        <div class="skills-header">
+            <h1>My <span class="highlight">Skills</span> & Expertise</h1>
+            <p>A comprehensive overview of my technical skills and competencies</p>
+        </div>
         
         <div class="skills-grid">
             <div class="skill-category">
@@ -244,6 +217,6 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
