@@ -13,129 +13,166 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
 
-        /* Navigation styling */
         header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
             position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
             display: flex;
-            flex-direction: row;
-            align-items: center;
             justify-content: space-between;
-            width: 95%;
-            background-color: #333;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
             color: white;
-            padding: 10px;
-            margin: 2.5%;
         }
 
-        nav ul {
-            list-style-type: none;
+        .nav-links {
             display: flex;
-            flex-direction: row;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
+            list-style: none;
+            gap: 2rem;
         }
 
-        nav a {
-            color: blueviolet;
+        .nav-links a {
+            color: white;
             text-decoration: none;
         }
 
-        /* Main content styling */
-        .container {
-            max-width: 800px;
+        main {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            padding: 2rem;
         }
 
-        .main-heading {
+        .hobbies-header {
             text-align: center;
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            border-bottom: 3px solid blueviolet;
-            padding-bottom: 15px;
-        }
-
-        .hobbies-list {
-            display: grid;
-            gap: 20px;
-        }
-
-        .hobby-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-bottom: 3rem;
             color: white;
-            padding: 25px;
+        }
+
+        .hobbies-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hobbies-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hobby-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
         }
 
-        .hobby-item:hover {
-            transform: translateY(-5px);
+        .hobby-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
         }
 
-        .hobby-name {
-            font-size: 1.5em;
+        .cricket .hobby-icon {
+            background: linear-gradient(45deg, #ff9a56, #ffad56);
+        }
+
+        .coding .hobby-icon {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .math .hobby-icon {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        }
+
+        .hobby-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .hobby-description {
-            font-size: 1em;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            .main-heading {
-                font-size: 2em;
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1><a href="home.html" style="text-decoration: none; color:blueviolet">Faisal Iqbal</a></h1>
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
+            <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">Faisal Iqbal</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="contactMe.html">Contact Me</a></li>
+                <li><a href="contactMe.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <h1 class="main-heading">My Hobbies</h1>
+    <main>
+        <div class="hobbies-header">
+            <h1>My <span class="highlight">Hobbies</span></h1>
+            <p>Exploring my passions and interests beyond the world of technology</p>
+        </div>
         
-        <div class="hobbies-list">
-            <div class="hobby-item">
-                <div class="hobby-name">Cricket</div>
+        <div class="hobbies-grid">
+            <div class="hobby-card cricket">
+                <div class="hobby-icon">🏏</div>
+                <h3>Cricket</h3>
                 <div class="hobby-description">I enjoy playing cricket, which helps me stay active and work as part of a team. It's a great way to unwind and connect with friends while improving my physical fitness and strategic thinking.</div>
             </div>
 
-            <div class="hobby-item">
-                <div class="hobby-name">Problem Solving (Coding)</div>
+            <div class="hobby-card coding">
+                <div class="hobby-icon">💻</div>
+                <h3>Problem Solving (Coding)</h3>
                 <div class="hobby-description">I love solving complex programming problems and challenges. It helps me think logically, improve my coding skills, and keeps me engaged with the latest technologies and algorithms.</div>
             </div>
+
+            <div class="hobby-card math">
+                <div class="hobby-icon">🧮</div>
+                <h3>Mathematical Problem Solving</h3>
+                <div class="hobby-description">Solving mathematical problems is one of my favorite pastimes. It sharpens my analytical thinking, enhances my problem-solving abilities, and provides a strong foundation for my programming and engineering studies.</div>
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
