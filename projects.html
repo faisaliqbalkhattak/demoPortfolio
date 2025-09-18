@@ -52,11 +52,6 @@
         .nav-links a {
             color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #ffd700;
         }
 
         main {
@@ -95,13 +90,7 @@
             border-radius: 15px;
             padding: 2rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             color: white;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         .project-icon {
@@ -168,36 +157,6 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .project-features {
-            margin-bottom: 1.5rem;
-        }
-
-        .project-features h4 {
-            margin-bottom: 0.5rem;
-            color: #ffd700;
-            font-size: 1rem;
-        }
-
-        .project-features ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .project-features li {
-            margin-bottom: 0.3rem;
-            padding-left: 1rem;
-            position: relative;
-            opacity: 0.9;
-        }
-
-        .project-features li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #4ecdc4;
-            font-weight: bold;
-        }
-
         .project-links {
             display: flex;
             gap: 1rem;
@@ -209,7 +168,6 @@
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            transition: all 0.3s ease;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
@@ -227,45 +185,7 @@
             border: 2px solid rgba(255, 255, 255, 0.5);
         }
 
-        .btn:hover {
-            transform: scale(1.05);
-        }
 
-        .btn-primary:hover {
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: white;
-        }
-
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .projects-header h1 {
-                font-size: 2rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            nav {
-                padding: 0 1rem;
-            }
-
-            main {
-                padding: 1rem;
-            }
-
-            .project-links {
-                flex-direction: column;
-            }
-        }
 
         .highlight {
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
@@ -279,9 +199,9 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Faisal Iqbal</div>
+            <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">Faisal Iqbal</a></div>
             <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -302,7 +222,7 @@
                 <div class="project-icon">📁</div>
                 <h3>File Management System</h3>
                 <div class="project-description">
-                    A comprehensive virtual file management system built with Python and Tkinter. Features a complete GUI for file operations, directory navigation, and system management with real-time updates and user-friendly interface design.
+                    A comprehensive virtual file management system with Python GUI for complete file operations and directory navigation.
                 </div>
                 <div class="tech-stack">
                     <h4>Tech Stack:</h4>
@@ -314,22 +234,9 @@
                         <span class="tech-tag">GUI Design</span>
                     </div>
                 </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Virtual file system implementation</li>
-                        <li>Complete CRUD operations for files/folders</li>
-                        <li>Interactive GUI with tree navigation</li>
-                        <li>Real-time file system updates</li>
-                        <li>Search and filter functionality</li>
-                    </ul>
-                </div>
                 <div class="project-links">
                     <a href="https://github.com/faisaliqbalkhattak/File-Management-System" class="btn btn-primary" target="_blank">
                         View Code
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        Live Demo
                     </a>
                 </div>
             </div>
@@ -338,7 +245,7 @@
                 <div class="project-icon">🔍</div>
                 <h3>SearchWright - Search Engine</h3>
                 <div class="project-description">
-                    A powerful search engine implementation using TF-IDF ranking algorithm. Processes 50K+ articles with efficient data structures including lexicon, inverted index, and forward index for lightning-fast search results.
+                    A powerful search engine using TF-IDF algorithm, processing 50K+ articles with efficient indexing for fast search results.
                 </div>
                 <div class="tech-stack">
                     <h4>Tech Stack:</h4>
@@ -350,23 +257,9 @@
                         <span class="tech-tag">Data Mining</span>
                     </div>
                 </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>TF-IDF ranking algorithm implementation</li>
-                        <li>Lexicon and inverted index structures</li>
-                        <li>Multi-word query processing</li>
-                        <li>Stop words filtering</li>
-                        <li>Large dataset handling (190K+ articles)</li>
-                        <li>Optimized search performance</li>
-                    </ul>
-                </div>
                 <div class="project-links">
                     <a href="https://github.com/faisaliqbalkhattak/Search-Engine" class="btn btn-primary" target="_blank">
                         View Code
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        Documentation
                     </a>
                 </div>
             </div>
@@ -375,7 +268,7 @@
                 <div class="project-icon">🌐</div>
                 <h3>BFS Graph Traversal</h3>
                 <div class="project-description">
-                    An efficient implementation of Breadth-First Search algorithm in C++. Demonstrates graph traversal techniques with optimized performance and clean code structure for educational and practical applications.
+                    An efficient C++ implementation of Breadth-First Search algorithm with optimized performance and clean code structure.
                 </div>
                 <div class="tech-stack">
                     <h4>Tech Stack:</h4>
@@ -387,23 +280,9 @@
                         <span class="tech-tag">Graph Theory</span>
                     </div>
                 </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Breadth-First Search implementation</li>
-                        <li>Graph representation using adjacency lists</li>
-                        <li>Queue-based traversal algorithm</li>
-                        <li>Optimal time complexity O(V+E)</li>
-                        <li>Memory efficient implementation</li>
-                        <li>Educational code structure</li>
-                    </ul>
-                </div>
                 <div class="project-links">
                     <a href="https://github.com/faisaliqbalkhattak/BSF_graph_traversal" class="btn btn-primary" target="_blank">
                         View Code
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        Algorithm Demo
                     </a>
                 </div>
             </div>
@@ -412,7 +291,7 @@
                 <div class="project-icon">🌐</div>
                 <h3>Kali Linux Website Clone</h3>
                 <div class="project-description">
-                    A pixel-perfect clone of the Kali Linux official website home page. Built with pure HTML and CSS, featuring responsive design, smooth animations, and all visual effects preserved from the original site.
+                    A pixel-perfect clone of Kali Linux website with pure HTML/CSS, featuring responsive design and smooth animations.
                 </div>
                 <div class="tech-stack">
                     <h4>Tech Stack:</h4>
@@ -425,23 +304,9 @@
                         <span class="tech-tag">Grid</span>
                     </div>
                 </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Pixel-perfect design replication</li>
-                        <li>Fully responsive layout</li>
-                        <li>Smooth CSS animations</li>
-                        <li>Interactive hover effects</li>
-                        <li>Cross-browser compatibility</li>
-                        <li>Pure CSS implementation</li>
-                    </ul>
-                </div>
                 <div class="project-links">
                     <a href="https://github.com/faisaliqbalkhattak/Website-clone" class="btn btn-primary" target="_blank">
                         View Code
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        Live Preview
                     </a>
                 </div>
             </div>
