@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies - Faisal Iqbal</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation styling */
+        header {
+            position: sticky;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 95%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 2.5%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: blueviolet;
+            text-decoration: none;
+        }
+
+        /* Main content styling */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-heading {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            border-bottom: 3px solid blueviolet;
+            padding-bottom: 15px;
+        }
+
+        .hobbies-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .hobby-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .hobby-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .hobby-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hobby-description {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .main-heading {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="home.html" style="text-decoration: none; color:blueviolet">Faisal Iqbal</a></h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="main-heading">My Hobbies</h1>
+        
+        <div class="hobbies-list">
+            <div class="hobby-item">
+                <div class="hobby-name">Cricket</div>
+                <div class="hobby-description">I enjoy playing cricket, which helps me stay active and work as part of a team. It's a great way to unwind and connect with friends while improving my physical fitness and strategic thinking.</div>
+            </div>
+
+            <div class="hobby-item">
+                <div class="hobby-name">Problem Solving (Coding)</div>
+                <div class="hobby-description">I love solving complex programming problems and challenges. It helps me think logically, improve my coding skills, and keeps me engaged with the latest technologies and algorithms.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
