@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Faisal Iqbal</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* these are very comman properties that i am applying on the nav bar of the portfolio */
+        /* all these properties has been covered in the lecture */
+        header {
+            position: sticky;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 95%;
+        
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 2.5%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: blueviolet;
+            text-decoration: none;
+        }
+
+        /* Main content styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .text-content {
+            flex: 2;
+        }
+
+        aside {
+            flex: 1;
+            text-align: center;
+        }
+
+        aside image {
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        aside image:hover {
+            transform: scale(1.05);
+        }
+
+        .image-caption {
+            text-align: center;
+            color: #555;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid blueviolet;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-left: 4px solid blueviolet;
+            border-radius: 4px;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        image {
+            display: block;
+            margin: 30px auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <!-- i am usign semantic html because we have done with that in the course 
+  i will also use the divs nesting  -->
+
+    <!-- the top most line in a sticky display (display property covered) -->
+
+    <header>
+        <h1> <a href="home.html" style=" text-decoration: none; color:blueviolet ">Faisal Iqbal</a>
+        </h1>
+        <nav>
+                        <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contactMe.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+   <main>
+        <h2>Welcome to my portfolio website</h2>
+        <h2>About Me</h2>
+        
+        <div class="content">
+            <div class="text-content">
+                <h3>BACHELORS OF SOFTWARE ENGINEERING
+                3ND YEAR.</h3>
+
+                <p>
+                I have a strong interest in mathematics, which has shaped my approach to computer science. My
+                solid understanding of mathematical concepts helps me appreciate algorithms, data structures, and
+                problem-solving. I enjoy finding logical patterns and applying them to practical solutions in
+                software engineering. I am also deeply interested in emerging technologies such as WEB3,
+                Blockchain, AI and Cloud Computing, and I look forward to applying them in real-world problemsolving.
+                </p>
+            </div>
+
+            <aside>
+                <image src="faisal.jpeg" alt="Faisal Iqbal" width="200">
+                <div class="image-caption">Faisal Iqbal<br>Software Engineer</div>
+            </aside>
+        </div>
+   </main>    
+
+
+
+
+
+</body>
+
+</html>
