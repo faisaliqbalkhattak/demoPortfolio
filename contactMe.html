@@ -13,158 +13,162 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
 
-        /* Navigation styling */
         header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
             position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
             display: flex;
-            flex-direction: row;
-            align-items: center;
             justify-content: space-between;
-            width: 95%;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            margin: 2.5%;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav a {
-            color: blueviolet;
-            text-decoration: none;
-        }
-
-        /* Main content styling */
-        .container {
-            max-width: 800px;
+            align-items: center;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            padding: 0 2rem;
         }
 
-        .main-heading {
-            text-align: center;
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            border-bottom: 3px solid blueviolet;
-            padding-bottom: 15px;
-        }
-
-        .contact-info {
-            display: grid;
-            gap: 20px;
-        }
-
-        .contact-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid blueviolet;
-        }
-
-        .contact-label {
+        .logo {
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 8px;
-            font-size: 1.1em;
+            color: white;
         }
 
-        .contact-value {
-            color: #666;
-            font-size: 1em;
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
         }
 
-        .contact-value a {
-            color: blueviolet;
+        .nav-links a {
+            color: white;
             text-decoration: none;
         }
 
-        .contact-value a:hover {
-            text-decoration: underline;
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            .main-heading {
-                font-size: 2em;
-            }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+
+
+        .highlight {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1><a href="home.html" style="text-decoration: none; color:blueviolet">Faisal Iqbal</a></h1>
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
+            <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">Faisal Iqbal</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="contactMe.html">Contact Me</a></li>
+                <li><a href="contactMe.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <h1 class="main-heading">Contact Me</h1>
+    <main>
+        <div class="contact-header">
+            <h1>Get In <span class="highlight">Touch</span></h1>
+            <p>Let's connect and explore opportunities together</p>
+        </div>
         
-        <div class="contact-info">
-            <div class="contact-item">
-                <div class="contact-label">Email</div>
-                <div class="contact-value">
-                    <a href="mailto:fiqbal.bese23seecs@seecs.edu.pk">fiqbal.bese23seecs@seecs.edu.pk</a>
-                </div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <a href="mailto:fiqbal.bese23seecs@seecs.edu.pk">fiqbal.bese23seecs@seecs.edu.pk</a>
             </div>
 
-            <div class="contact-item">
-                <div class="contact-label">Phone</div>
-                <div class="contact-value">
-                    <a href="tel:03365647081">03365647081</a>
-                </div>
+            <div class="contact-card">
+                <h3>Phone</h3>
+                <a href="tel:03365647081">03365647081</a>
             </div>
 
-            <div class="contact-item">
-                <div class="contact-label">Facebook</div>
-                <div class="contact-value">
-                    <a href="https://www.fb.com/faisaliqbalkhattakem" target="_blank">www.fb.com/faisaliqbalkhattakem</a>
-                </div>
+            <div class="contact-card">
+                <h3>GitHub</h3>
+                <a href="https://github.com/faisaliqbalkhattak" target="_blank">github.com/faisaliqbalkhattak</a>
             </div>
 
-            <div class="contact-item">
-                <div class="contact-label">LinkedIn</div>
-                <div class="contact-value">
-                    <a href="https://www.linkedin.com/in/faisaliqbalkhattak" target="_blank">www.linkedin.com/in/faisaliqbalkhattak</a>
-                </div>
+            <div class="contact-card">
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/faisaliqbalkhattak/" target="_blank">linkedin.com/in/faisaliqbalkhattak</a>
             </div>
 
-            <div class="contact-item">
-                <div class="contact-label">GitHub</div>
-                <div class="contact-value">
-                    <a href="https://www.github.com/faisaliqbalkhattak" target="_blank">www.github.com/faisaliqbalkhattak</a>
-                </div>
+            <div class="contact-card">
+                <h3>Facebook</h3>
+                <a href="https://www.facebook.com/faisaliqbalkhattakem" target="_blank">facebook.com/faisaliqbalkhattakem</a>
+            </div>
+
+            <div class="contact-card">
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/faisaliqbalkhattakem" target="_blank">instagram.com/faisaliqbalkhattakem</a>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
