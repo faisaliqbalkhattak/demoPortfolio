@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Faisal Iqbal</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation styling */
+        header {
+            position: sticky;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 95%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 2.5%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: blueviolet;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+
+        .main-heading {
+            text-align: center;
+            color: #333;
+            font-size: 3em;
+            margin-bottom: 50px;
+            border-bottom: 4px solid blueviolet;
+            padding-bottom: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+
+        .skill-category h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            background: rgba(255,255,255,0.1);
+            margin: 8px 0;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border-left: 4px solid rgba(255,255,255,0.5);
+            transition: background 0.3s ease;
+        }
+
+        .skill-list li:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Different gradient colors for variety */
+        .skill-category:nth-child(1) {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .skill-category:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .skill-category:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .skill-category:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .skill-category:nth-child(5) {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .skill-category:nth-child(6) {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #333;
+        }
+
+        .skill-category:nth-child(7) {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-heading {
+                font-size: 2.5em;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="home.html" style="text-decoration: none; color:blueviolet">Faisal Iqbal</a></h1>
+        <nav>
+                        <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contactMe.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="main-heading">My Skills & Expertise</h1>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Web Development</h3>
+                <ul class="skill-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Web Engineering (Ongoing)</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>CyberSecurity & ML</h3>
+                <ul class="skill-list">
+                    <li>CyberSecurity</li>
+                    <li>Firewalls</li>
+                    <li>ML Algorithms</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <ul class="skill-list">
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>MySQL</li>
+                    <li>Matlab</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Core Computer Science</h3>
+                <ul class="skill-list">
+                    <li>Mathematics</li>
+                    <li>Algorithms</li>
+                    <li>Operating Systems</li>
+                    <li>Cloud Computing</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Hardware & AI</h3>
+                <ul class="skill-list">
+                    <li>Digital Logic Design</li>
+                    <li>Basics of AI Concepts</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Development Tools</h3>
+                <ul class="skill-list">
+                    <li>VS Code</li>
+                    <li>GitHub</li>
+                    <li>Matlab</li>
+                    <li>Proteus</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Professional Tools</h3>
+                <ul class="skill-list">
+                    <li>LaTeX</li>
+                    <li>Linux Environment</li>
+                    <li>Cisco Packet Tracer</li>
+                    <li>Docker Environment</li>
+                    <li>GitHub Pages</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
