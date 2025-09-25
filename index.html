@@ -5,140 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faisal Iqbal - Portfolio</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .home-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: white;
-        }
-
-        .home-header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .home-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-            align-items: start;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-
-        .text-content {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        .text-content h2 {
-            color: #ffd700;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
-        aside {
-            text-align: center;
-        }
-
-        aside img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .image-caption {
-            margin-top: 1rem;
-            color: #ffd700;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-
-
-        .highlight {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: bold;
-        }
-    </style>
-
-
-
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
+
+    <!-- this is the header section that contains the logo and the navigation
+     unfortunately i am using the seprate file layout for each section so i cannot just impot 
+     that in each page i will have to copy and paste it its styling will be consitent it classes are logo and na
+     so i can apply css once only -->
     <header>
         <nav>
             <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">Faisal Iqbal</a></div>
@@ -153,18 +29,23 @@
         </nav>
     </header>
 
+    <!-- this the exculisive section of the home so i need to style it seperately  -->
     <main>
         <div class="home-header">
             <h1>Welcome to My <span class="highlight">Portfolio</span></h1>
             <p>Passionate Software Engineering Student & Future Innovator</p>
         </div>
-        
+
         <div class="content">
             <div class="text-content">
                 <h2>About Me</h2>
-                <p>I have a strong interest in mathematics, which has shaped my approach to computer science. My solid understanding of mathematical concepts helps me appreciate algorithms, data structures, and problem-solving. I enjoy finding logical patterns and applying them to practical solutions in software engineering. I am also deeply interested in emerging technologies such as WEB3, Blockchain, AI and Cloud Computing, and I look forward to applying them in real-world problem-solving.</p>
+                <p>I have a strong interest in mathematics, which has shaped my approach to computer science. My solid
+                    understanding of mathematical concepts helps me appreciate algorithms, data structures, and
+                    problem-solving. I enjoy finding logical patterns and applying them to practical solutions in
+                    software engineering. I am also deeply interested in emerging technologies such as WEB3, Blockchain,
+                    AI and Cloud Computing, and I look forward to applying them in real-world problem-solving.</p>
             </div>
-
+            <!-- this is the picture should be on the side -->
             <aside>
                 <img src="faisal.jpeg" alt="Faisal Iqbal">
                 <div class="image-caption">Faisal Iqbal<br>Software Engineer</div>
@@ -172,6 +53,7 @@
         </div>
     </main>
 </body>
+
 </html>
 
 </html>
